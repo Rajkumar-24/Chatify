@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import ChatsScreen from "./src/screens/ChatsScreen";
 import ChatScreen from "./src/screens/ChatScreen";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
-    paddingVertical: 50,
+    paddingTop: 65,
+    paddingBottom: 27,
   },
 });
