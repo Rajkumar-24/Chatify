@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ChatsScreen from "./../screens/ChatsScreen";
 import MainTabNavigator from "./MainTabNavigator";
 import { Entypo } from "@expo/vector-icons";
+import ContactsScreen from "./../screens/ContactsScreen";
 
 const Stack = createNativeStackNavigator();
 const Navigator = () => {
@@ -22,6 +23,7 @@ const Navigator = () => {
         />
 
         <Stack.Screen name="Chat" component={ChatScreen} />
+        <Stack.Screen name="Contact" component={ContactsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
