@@ -17,7 +17,8 @@
     "user": {
       "id": "u3",
       "name": "Daniil Top",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
+      "status": "Hey User"
     },
     "lastMessage": {
       "id": "m2",

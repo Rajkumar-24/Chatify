@@ -4,8 +4,12 @@ import ChatsScreen from "./src/screens/ChatsScreen";
 import ChatScreen from "./src/screens/ChatScreen";
 import { MaterialIcons } from "@expo/vector-icons";
 import Navigator from "./src/navigation";
+import { Amplify } from "aws-amplify";
+import awsconfig from "./src/aws-exports";
+import { withAuthenticator } from "aws-amplify-react-native";
+Amplify.configure({ ...awsconfig, Analytics: { disabled: true } });
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
       <Navigator>
@@ -23,25 +27,5 @@ const styles = StyleSheet.create({
     backgroundColor: "whitesmoke",
     justifyContent: "center",
   },
-  rightArrow: {
-    position: "absolute",
-    backgroundColor: "#0078fe",
-    //backgroundColor:"red",
-    width: 20,
-    height: 25,
-    bottom: 0,
-    borderBottomLeftRadius: 25,
-    right: -10,
-  },
-
-  rightArrowOverlap: {
-    position: "absolute",
-    backgroundColor: "#eeeeee",
-    //backgroundColor:"green",
-    width: 20,
-    height: 35,
-    bottom: -6,
-    borderBottomLeftRadius: 18,
-    right: -20,
-  },
 });
+export default withAuthenticator(App);
