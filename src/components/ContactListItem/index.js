@@ -50,4 +50,7 @@ const styles = StyleSheet.create({
   subTitle: {
     color: "grey",
   },
+  content: {
+    flex: 1,
+  },
 });
